@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
 import 'package:yb_common/common/util/Log.dart';
 
@@ -24,7 +25,7 @@ class LogsInterceptors extends InterceptorsWrapper {
               logs[options.path] = map;
           }
     } catch (e,s) {
-      Log.i2(e,s);
+      log.i2(e,s);
     }
     
     return options;
@@ -36,10 +37,10 @@ class LogsInterceptors extends InterceptorsWrapper {
       if (Config.DEBUG) {
             Map map = (logs.remove(response?.request?.path ?? ""))??{};
             map["response"] = response??"";
-            Log.dMap(map);
+            log.dMap(map);
           }
     } catch (e,s) {
-      Log.i2(e,s);
+      log.i2(e,s);
     }
     return response; // continue
   }
@@ -69,11 +70,11 @@ class LogsInterceptors extends InterceptorsWrapper {
               //Log.i2(e,s);
             }
             //
-            Log.dMap(map);
+            log.dMap(map);
 
       }
     } catch (e,s) {
-      Log.i2(e,s);
+      log.i2(e,s);
     }
     return err; // continue;
   }

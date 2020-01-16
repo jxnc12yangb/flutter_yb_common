@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
 import 'package:yb_common/common/local/local_storage.dart';
 import 'package:yb_common/common/util/Log.dart';
@@ -94,7 +95,7 @@ class RequestInterceptors extends InterceptorsWrapper {
         //options.queryParameters = null;
 
       } catch (e,s) {
-        Log.i2(e,s);
+        log.i2(e,s);
       }
     }
     //options.headers["Authorization"] = _token;

@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
-import 'package:yb_common/common/util/Log.dart';
 import 'dart:collection';
 import 'code.dart';
 import 'package:dio_http_cache/dio_http_cache.dart';
 
 import 'result_data.dart';
+
 
 ///http请求
 class HttpManager {
@@ -76,7 +77,7 @@ class HttpManager {
           }
       return response.data;
     } catch (e,i) {
-      Log.i2(e,i);
+      log.i2(e,i);
       return ResultData(
           Code.errorHandleFunction(Code.NETWORK_TIMEOUT, "异常", false),
           false,

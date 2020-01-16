@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/net/code.dart';
 import 'package:yb_common/common/util/Log.dart';
 
@@ -48,7 +49,7 @@ class ResponseInterceptors extends InterceptorsWrapper {
             headers: response.headers);
       }*/
     } catch (e,s) {
-      Log.i2(e,s);
+      log.i2(e,s);
       value = new ResultData(response.data, false, response.statusCode,
           headers: response.headers);
     }
@@ -70,7 +71,7 @@ class ResponseInterceptors extends InterceptorsWrapper {
         }
       }
     }catch(e,s){
-      Log.i2(e,s);
+      log.i2(e,s);
     }
 
 

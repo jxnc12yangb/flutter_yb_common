@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
 import 'package:yb_common/common/local/local_storage.dart';
 import 'package:yb_common/common/util/EncryptUtil.dart';
@@ -55,7 +56,7 @@ class TokenInterceptors extends InterceptorsWrapper {
     try {
 
       if (err?.response?.statusCode == 403) {
-        Log.dTAG(TAG, "DioError auth 异常 $err");
+        log.dTAG(TAG, "DioError auth 异常 $err");
         _dio.lock();
         _dio.interceptors.responseLock.lock();
         _dio.interceptors.errorLock.lock();
@@ -76,7 +77,7 @@ class TokenInterceptors extends InterceptorsWrapper {
         return _dio.request(err.request.path,options:err.request);
       }
     } catch (e,s) {
-      Log.i2(e,s);
+      log.i2(e,s);
     }
     return err; // continue;
   }
@@ -91,7 +92,7 @@ class TokenInterceptors extends InterceptorsWrapper {
   ///获取授权token
   getAuthorization() async {
     String apiKey  = await LocalStorage.get(Config.API_KEY);
-    Log.dTAG(TAG,"getAuthorization apiKey==$apiKey");
+    log.dTAG(TAG,"getAuthorization apiKey==$apiKey");
     /*if (apiKey==null||apiKey.isEmpty) {
       var randomKey = await Config.getApiKey();
       var rscKey = await EncryptUtil.rsaEncode(randomKey,publicKey:Config.publicKeyString);
