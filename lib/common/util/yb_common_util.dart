@@ -1,4 +1,7 @@
-library yb_common;
+/// @author yangbang
+/// @create 2020/1/16
+/// @Describe
+library yb_common_util;
 /// @author yangbang
 /// @create 2020/1/15
 /// @Describe
@@ -15,21 +18,3 @@ export 'package:yb_common/common/style/yb_style.dart';
 export 'package:yb_common/common/local/local_storage.dart';
 export 'package:yb_common/common/config/config.dart';
 export 'package:yb_common/common/local/local_storage.dart';
-
-
-
-
-/*
-
-export 'package:yb_common/common/event/http_error_event.dart';
-export 'package:yb_common/common/event/index.dart';
-*/
-
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
-
-
