@@ -13,7 +13,7 @@ const double iosRefreshHeight = 140;
 const double iosRefreshIndicatorExtent = 100;
 
 ///通用下上刷新控件
-class GSYPullLoadWidget extends StatefulWidget {
+class YBPullLoadWidget extends StatefulWidget {
   ///item渲染
   final IndexedWidgetBuilder itemBuilder;
 
@@ -24,7 +24,7 @@ class GSYPullLoadWidget extends StatefulWidget {
   final RefreshCallback onRefresh;
 
   ///控制器，比如数据和一些配置
-  final GSYPullLoadWidgetControl control;
+  final YBPullLoadWidgetControl control;
 
   final ScrollController scrollController;
 
@@ -33,15 +33,15 @@ class GSYPullLoadWidget extends StatefulWidget {
   ///刷新key
   final Key refreshKey;
 
-  GSYPullLoadWidget(
+  YBPullLoadWidget(
       this.control, this.itemBuilder, this.onRefresh, this.onLoadMore,
       {this.refreshKey, this.scrollController, this.userIos = false});
 
   @override
-  _GSYPullLoadWidgetState createState() => _GSYPullLoadWidgetState();
+  _YBPullLoadWidgetState createState() => _YBPullLoadWidgetState();
 }
 
-class _GSYPullLoadWidgetState extends State<GSYPullLoadWidget>
+class _YBPullLoadWidgetState extends State<YBPullLoadWidget>
     with GSYFlarePullController {
   //with GSYFlarePullMutliController {
 
@@ -342,7 +342,7 @@ class _GSYPullLoadWidgetState extends State<GSYPullLoadWidget>
   }
 }
 
-class GSYPullLoadWidgetControl extends ChangeNotifier {
+class YBPullLoadWidgetControl extends ChangeNotifier {
   ///数据，对齐增减，不能替换
   List _dataList = new List();
 
