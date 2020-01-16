@@ -1,6 +1,6 @@
 library base;
 
-import 'common/config/config.dart';
+import 'package:yb_common/config.dart';
 import 'common/util/Log.dart';
 /// @author yangbang
 /// @create 2020/1/15

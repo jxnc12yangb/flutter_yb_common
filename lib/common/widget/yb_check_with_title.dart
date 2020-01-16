@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:yb_common/common/localization/yb_string_zh.dart';
-import 'package:yb_common/common/style/yb_style.dart';
+import 'package:yb_common/style.dart';
 
 /// @author yangbang
 /// @create 2019/12/17

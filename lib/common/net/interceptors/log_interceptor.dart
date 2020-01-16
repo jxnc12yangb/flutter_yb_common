@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
-import 'package:yb_common/common/config/config.dart';
+import 'package:yb_common/config.dart';
 import 'package:yb_common/common/util/Log.dart';
 import 'package:yb_common/net.dart';
 

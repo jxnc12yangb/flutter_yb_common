@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
-import 'package:yb_common/common/config/config.dart';
+import 'package:yb_common/config.dart';
 import 'dart:collection';
 import 'code.dart';
 import 'package:dio_http_cache/dio_http_cache.dart';

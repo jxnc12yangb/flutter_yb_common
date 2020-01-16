@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:yb_common/common/style/yb_style.dart';
+import 'package:yb_common/style.dart';
 import 'package:yb_common/common/widget/yb_text_widget.dart';
 
 /// @author yangbang

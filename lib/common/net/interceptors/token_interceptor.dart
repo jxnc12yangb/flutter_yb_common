@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
-import 'package:yb_common/common/config/config.dart';
-import 'package:yb_common/common/local/local_storage.dart';
+import 'package:yb_common/config.dart';
+import 'package:yb_common/local_storage.dart';
 import 'package:yb_common/net.dart';
 
 import 'package:synchronized/synchronized.dart' as synchronized;

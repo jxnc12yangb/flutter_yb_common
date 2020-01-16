@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yb_common/common/style/yb_style.dart';
+import 'package:yb_common/style.dart';
 
 
 class YBStatefulWidget{

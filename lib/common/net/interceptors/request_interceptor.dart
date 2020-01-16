@@ -2,8 +2,8 @@ import 'dart:collection';
 
 import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
-import 'package:yb_common/common/config/config.dart';
-import 'package:yb_common/common/local/local_storage.dart';
+import 'package:yb_common/config.dart';
+import 'package:yb_common/local_storage.dart';
 import 'package:yb_common/common/util/Log.dart';
 import 'package:yb_common/common/util/common_utils.dart';
 import 'package:yb_common/common/util/date_util.dart';

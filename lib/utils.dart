@@ -11,7 +11,7 @@ export 'package:yb_common/common/util/object_util.dart';
 export 'package:yb_common/common/util/PageManager.dart';
 export 'package:yb_common/common/util/regex_util.dart';
 export 'package:yb_common/common/util/text_util.dart';
-export 'package:yb_common/common/local/local_storage.dart';
+export 'package:yb_common/local_storage.dart';
 
 
 
