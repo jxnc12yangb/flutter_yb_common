@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 import 'package:yb_common/common/widget/yb_text_widget.dart';
 
@@ -29,7 +30,7 @@ class YBProgressBarState extends State<YBProgressBar> {
     BoxDecoration norDecro = BoxDecoration(
         shape: BoxShape.circle,
         //borderRadius: new BorderRadius.circular((20.0)),
-        color:YBColors.primaryValue
+        color:color.primaryValue
     );
     BoxDecoration errorDecro = BoxDecoration(
         shape: BoxShape.circle,
@@ -43,21 +44,21 @@ class YBProgressBarState extends State<YBProgressBar> {
     );
     return Column(children: <Widget>[
       Row(children: <Widget>[
-        SizedBox(width:YBSise.padding,),
+        SizedBox(width:size.padding,),
         Container(decoration:widget.data[0].isPass?norDecro:errorDecro,width:circle,height:circle,),
-        Expanded(child:Container(height: 2,color:YBColors.primaryValue,),),
+        Expanded(child:Container(height: 2,color:color.primaryValue,),),
         Container(decoration:widget.data[1].ok?norDecro:errorDecro,width:circle,height:circle,),
-        Expanded(child: Container(height:2,color:widget.data[1].isPass?YBColors.primaryValue:Colors.black12,)),
+        Expanded(child: Container(height:2,color:widget.data[1].isPass?color.primaryValue:Colors.black12,)),
         Container(decoration:widget.data[1].isPass?widget.data[2].ok?norDecro:errorDecro:darkDecro,width:circle,height:circle,),
-        SizedBox(width:YBSise.padding,),
+        SizedBox(width:size.padding,),
       ],),
-      SizedBox(height: YBSise.SH[17],),
+      SizedBox(height: size.SH[17],),
       Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,children: <Widget>[
         MinText(widget.data[0].title),
-        Text(widget.data[1].title,style:TextStyle(fontSize:YBTextStyle.minTextSize,color:widget.data[1].ok?YBColors.mainTextColor:Colors.red),),
+        Text(widget.data[1].title,style:TextStyle(fontSize:textStyle.minTextSize,color:widget.data[1].ok?color.mainTextColor:Colors.red),),
         MinText(widget.data[2].title),
       ],),
-      widget.tip==null?SizedBox(height:YBSise.SH[38],):Container(margin:EdgeInsets.only(top:YBSise.padding,bottom:YBSise.padding),padding:EdgeInsets.all(YBSise.padding),child: MinTextDark(widget.tip),color: Color(0xFFF4F5F6),)
+      widget.tip==null?SizedBox(height:size.SH[38],):Container(margin:EdgeInsets.only(top:size.padding,bottom:size.padding),padding:EdgeInsets.all(size.padding),child: MinTextDark(widget.tip),color: Color(0xFFF4F5F6),)
     ],);
   }
 }

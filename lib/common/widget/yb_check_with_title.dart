@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/common/localization/yb_string_zh.dart';
 import 'package:yb_common/style.dart';
 
@@ -38,11 +39,11 @@ class CheckWithTitle extends StatelessWidget{
       RichText(
           text: TextSpan(
             text: title??YBStringZh.me_read_agree,
-            style: YBTextStyle.minTextDark,
+            style: textStyle.minTextDark,
             children: <TextSpan>[
               TextSpan(
                   text: title_tip??YBStringZh.today_agreement,
-                  style: YBTextStyle.minTextPri,
+                  style: textStyle.minTextPri,
                   recognizer: new TapGestureRecognizer()..onTap = onTab
               ),
             ],)

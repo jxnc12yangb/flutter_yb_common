@@ -3,6 +3,7 @@
 /// @Describe
 import 'package:flutter/material.dart';
 import 'package:gzx_dropdown_menu/gzx_dropdown_menu.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 
 typedef OnItemTap<T> = void Function(T value);
@@ -103,11 +104,11 @@ class _GZXDropDownHeaderState extends State<GZXDropDownHeader> with SingleTicker
       child:Column(children: <Widget>[
         SizedBox(height:5,),
         Row(children: <Widget>[
-          SizedBox(width:YBSise.padding,),
+          SizedBox(width:size.padding,),
           _menu(widget.items[0]),
           _menu(widget.items[1]),
           Expanded(child:Text(""),),
-          /*SizedBox(width:YBSise.padding,),
+          /*SizedBox(width:size.padding,),
         GestureDetector(child:Icon(Icons.search) ,onTap: (){Future<DateTime> selectedDate = showDatePicker(
           context: context,
           initialDate: DateTime.now(),
@@ -120,7 +121,7 @@ class _GZXDropDownHeaderState extends State<GZXDropDownHeader> with SingleTicker
             );
           },
         );},),
-        SizedBox(width:YBSise.padding,),*/
+        SizedBox(width:size.padding,),*/
         ],),
         SizedBox(height:5,),
         Divider(height: 0,),

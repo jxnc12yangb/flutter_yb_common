@@ -5,378 +5,384 @@ import 'package:flutter/material.dart';
 /// @create 2019/12/12
 /// @Describe
 class YBColors {
-  static const int primaryIntValue = 0xFF498FFF;
+  
+  YBColors({this.primaryIntValue}){
+    primarySwatch = MaterialColor(primaryIntValue,<int, Color>{
+      50:  Color(primaryIntValue),
+      100:  Color(primaryIntValue),
+      200:  Color(primaryIntValue),
+      300:  Color(primaryIntValue),
+      400:  Color(primaryIntValue),
+      500:  Color(primaryIntValue),
+      600:  Color(primaryIntValue),
+      700:  Color(primaryIntValue),
+      800:  Color(primaryIntValue),
+      900:  Color(primaryIntValue),
+    });  
+  }
+  
+  int primaryIntValue = 0xFF498FFF;
+  MaterialColor primarySwatch ;
+  
 
-  static const MaterialColor primarySwatch = const MaterialColor(
-    primaryIntValue,
-    const <int, Color>{
-      50: const Color(primaryIntValue),
-      100: const Color(primaryIntValue),
-      200: const Color(primaryIntValue),
-      300: const Color(primaryIntValue),
-      400: const Color(primaryIntValue),
-      500: const Color(primaryIntValue),
-      600: const Color(primaryIntValue),
-      700: const Color(primaryIntValue),
-      800: const Color(primaryIntValue),
-      900: const Color(primaryIntValue),
-    },
-  );
+  String primaryValueString = "#24292E";
+   String primaryLightValueString = "#42464b";
+   String primaryDarkValueString = "#121917";
+   String miWhiteString = "#ececec";
+   String actionBlueString = "#267aff";
+   String webDraculaBackgroundColorString = "#282a36";
 
-  static const String primaryValueString = "#24292E";
-  static const String primaryLightValueString = "#42464b";
-  static const String primaryDarkValueString = "#121917";
-  static const String miWhiteString = "#ececec";
-  static const String actionBlueString = "#267aff";
-  static const String webDraculaBackgroundColorString = "#282a36";
+   Color primaryValue = Color(0xFF498FFF);
+   Color primaryLightValue = Color(0xFF42464b);
+   Color primaryDarkValue = Color(0xFF498FFF);
 
-  static const Color primaryValue = Color(0xFF498FFF);
-  static const Color primaryLightValue = Color(0xFF42464b);
-  static const Color primaryDarkValue = Color(0xFF498FFF);
+   Color cardWhite = Color(0xFFFFFFFF);
+   Color textWhite = Color(0xFFFFFFFF);
+   Color miWhite = Color(0xffececec);
+   Color white = Color(0xFFFFFFFF);
+   Color contentBG = Color(0xFFF4F5F6);
+   Color actionBlue = Color(0xff267aff);
+   Color subTextColor = Color(0xFF999999);
+   Color subLightTextColor = Color(0xffc4c4c4);
 
-  static const Color cardWhite = Color(0xFFFFFFFF);
-  static const Color textWhite = Color(0xFFFFFFFF);
-  static const Color miWhite = Color(0xffececec);
-  static const Color white = Color(0xFFFFFFFF);
-  static const Color contentBG = Color(0xFFF4F5F6);
-  static const Color actionBlue = Color(0xff267aff);
-  static const Color subTextColor = Color(0xFF999999);
-  static const Color subLightTextColor = Color(0xffc4c4c4);
+   Color mainBackgroundColor = Color(0xFFFFFFFF);
 
-  static const Color mainBackgroundColor = miWhite;
+   Color mainTextColor = Color(0xFF333333);
+   Color textColorWhite = Color(0xFFFFFFFF);
 
-  static const Color mainTextColor = Color(0xFF333333);
-  static const Color textColorWhite = white;
+   Color dark = Color(0xFF999999);
 
-  static const Color dark = Color(0xFF999999);
+   Color darkTip = Color(0xFF666666);
 
-  static const Color darkTip = Color(0xFF666666);
+  // Color darkNomal = Color(0xFF999999);
+   Color darkLight = Color(0xFFBBBBBB);
 
-  //static const Color darkNomal = Color(0xFF999999);
-  static const Color darkLight = Color(0xFFBBBBBB);
-
-  static const Color iconWhite = Color(0xFFBBBBBB);
+   Color iconWhite = Color(0xFFBBBBBB);
 
 
 }
 
 ///文本样式
 class YBTextStyle {
-  static const String app_default_share_url =
+
+  YBSise size;
+  YBColors colors;
+
+  YBTextStyle(this.size,this.colors);
+
+   String app_default_share_url =
       "https://github.com/CarGuo/gsy_github_app_flutter";
 
-  static double biglarerTextSiez = YBSise.biglarerTextSiez;
-  static double lagerTextSize = YBSise.lagerTextSize;
-  static double bigTextSize = YBSise.bigTextSize;
-  static double middleTextWhiteSize = YBSise.middleTextWhiteSize;
-  static double normalTextSize = YBSise.normalTextSize;
-  static double smallTextSize = YBSise.smallTextSize;
-  static double minTextSize = YBSise.minTextSize;
+   double get biglarerTextSiez =>size.biglarerTextSiez;
+   double get lagerTextSize =>size.lagerTextSize;
+   double get bigTextSize =>size.bigTextSize;
+   double get middleTextWhiteSize =>size.middleTextWhiteSize;
+   double get normalTextSize=>size.normalTextSize;
+   double get smallTextSize=>size.smallTextSize;
+   double get minTextSize=>size.minTextSize;
+   
 
-  double sdsf = 10;
-
-  static TextStyle minText = TextStyle(
-    color: YBColors.mainTextColor,
+  TextStyle get minText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: minTextSize,
   );
 
-  static TextStyle minTextPri = TextStyle(
-    color: YBColors.primaryValue,
+   TextStyle get minTextPri => TextStyle(
+    color: colors.primaryValue,
     fontSize: minTextSize,
   );
 
-  static TextStyle minTextDark = TextStyle(
-    color: YBColors.dark,
+   TextStyle get minTextDark => TextStyle(
+    color: colors.dark,
     fontSize: minTextSize,
   );
 
-  static TextStyle minTextDarkLike = TextStyle(
-    color: YBColors.darkLight,
+   TextStyle get minTextDarkLike => TextStyle(
+    color: colors.darkLight,
     fontSize: minTextSize,
   );
 
-  static TextStyle smallTextWhite = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get smallTextWhite => TextStyle(
+    color: colors.textColorWhite,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get smallText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallTextDark = TextStyle(
-    color: YBColors.dark,
+   TextStyle get smallTextDark => TextStyle(
+    color: colors.dark,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallTextDarkLike = TextStyle(
-    color: YBColors.darkLight,
+   TextStyle get smallTextDarkLike => TextStyle(
+    color: colors.darkLight,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallTextBold = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get smallTextBold => TextStyle(
+    color: colors.mainTextColor,
     fontSize: smallTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle smallSubLightText = TextStyle(
-    color: YBColors.subLightTextColor,
+   TextStyle get smallSubLightText => TextStyle(
+    color: colors.subLightTextColor,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallActionLightText = TextStyle(
-    color: YBColors.actionBlue,
+   TextStyle get smallActionLightText => TextStyle(
+    color: colors.actionBlue,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallMiLightText = TextStyle(
-    color: YBColors.miWhite,
+   TextStyle get smallMiLightText => TextStyle(
+    color: colors.miWhite,
     fontSize: smallTextSize,
   );
 
-  static TextStyle smallSubText = TextStyle(
-    color: YBColors.subTextColor,
+   TextStyle get smallSubText => TextStyle(
+    color: colors.subTextColor,
     fontSize: smallTextSize,
   );
 
-  static TextStyle middleText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get middleText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: middleTextWhiteSize,
   );
 
-  static TextStyle middleTextWhite = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get middleTextWhite => TextStyle(
+    color: colors.textColorWhite,
     fontSize: middleTextWhiteSize,
   );
 
-  static TextStyle middleTextDark = TextStyle(
-    color: YBColors.dark,
+   TextStyle get middleTextDark => TextStyle(
+    color: colors.dark,
     fontSize: middleTextWhiteSize,
   );
 
-  static TextStyle middleSubText = TextStyle(
-    color: YBColors.subTextColor,
+   TextStyle get middleSubText => TextStyle(
+    color: colors.subTextColor,
     fontSize: middleTextWhiteSize,
   );
 
-  static TextStyle middleSubLightText = TextStyle(
-    color: YBColors.subLightTextColor,
+   TextStyle get middleSubLightText => TextStyle(
+    color: colors.subLightTextColor,
     fontSize: middleTextWhiteSize,
   );
 
-  static TextStyle middleTextBold = TextStyle(
-    color: YBColors.mainTextColor,
-    fontSize: middleTextWhiteSize,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle middleTextWhiteBold = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get middleTextBold => TextStyle(
+    color: colors.mainTextColor,
     fontSize: middleTextWhiteSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle middleSubTextBold = TextStyle(
-    color: YBColors.subTextColor,
+   TextStyle get middleTextWhiteBold => TextStyle(
+    color: colors.textColorWhite,
     fontSize: middleTextWhiteSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle normalText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get middleSubTextBold => TextStyle(
+    color: colors.subTextColor,
+    fontSize: middleTextWhiteSize,
+    fontWeight: FontWeight.bold,
+  );
+
+   TextStyle get normalText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: normalTextSize,
   );
 
-  static TextStyle normalTextBold = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get normalTextBold => TextStyle(
+    color: colors.mainTextColor,
     fontSize: normalTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle normalSubText = TextStyle(
-    color: YBColors.subTextColor,
+   TextStyle get normalSubText => TextStyle(
+    color: colors.subTextColor,
     fontSize: normalTextSize,
   );
 
-  static TextStyle normalTextDark = TextStyle(
-    color: YBColors.dark,
+   TextStyle get normalTextDark => TextStyle(
+    color: colors.dark,
     fontSize: normalTextSize,
   );
 
-  static TextStyle normalTextWhite = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get normalTextWhite => TextStyle(
+    color: colors.textColorWhite,
     fontSize: normalTextSize,
   );
 
-  static TextStyle normalTextWhiteBold = TextStyle(
-    color: YBColors.textColorWhite,
-    fontSize: normalTextSize,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle normalTextMitWhiteBold = TextStyle(
-    color: YBColors.miWhite,
+   TextStyle get normalTextWhiteBold => TextStyle(
+    color: colors.textColorWhite,
     fontSize: normalTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle normalTextActionWhiteBold = TextStyle(
-    color: YBColors.actionBlue,
+   TextStyle get normalTextMitWhiteBold => TextStyle(
+    color: colors.miWhite,
     fontSize: normalTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle normalTextLight = TextStyle(
-    color: YBColors.primaryLightValue,
+   TextStyle get normalTextActionWhiteBold => TextStyle(
+    color: colors.actionBlue,
+    fontSize: normalTextSize,
+    fontWeight: FontWeight.bold,
+  );
+
+   TextStyle get normalTextLight => TextStyle(
+    color: colors.primaryLightValue,
     fontSize: normalTextSize,
   );
 
-  static TextStyle largeText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get largeText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: bigTextSize,
   );
 
-  static TextStyle largeTextBold = TextStyle(
-    color: YBColors.mainTextColor,
-    fontSize: bigTextSize,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle largeTextWhite = TextStyle(
-    color: YBColors.textColorWhite,
-    fontSize: bigTextSize,
-  );
-
-  static TextStyle largeTextWhiteBold = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get largeTextBold => TextStyle(
+    color: colors.mainTextColor,
     fontSize: bigTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle largeLargeTextWhite = TextStyle(
-    color: YBColors.textColorWhite,
+   TextStyle get largeTextWhite => TextStyle(
+    color: colors.textColorWhite,
+    fontSize: bigTextSize,
+  );
+
+   TextStyle get largeTextWhiteBold => TextStyle(
+    color: colors.textColorWhite,
+    fontSize: bigTextSize,
+    fontWeight: FontWeight.bold,
+  );
+
+   TextStyle get largeLargeTextWhite => TextStyle(
+    color: colors.textColorWhite,
     fontSize: lagerTextSize,
     fontWeight: FontWeight.bold,
   );
 
 
-
-  static TextStyle largeLargeText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get largeLargeText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: lagerTextSize,
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle bigLargeText = TextStyle(
-    color: YBColors.mainTextColor,
+   TextStyle get bigLargeText => TextStyle(
+    color: colors.mainTextColor,
     fontSize: biglarerTextSiez,
     fontWeight: FontWeight.bold,
   );
 
 
-  static TextStyle hinkLargeStyle = TextStyle(
+   TextStyle get hinkLargeStyle => TextStyle(
     color: Color(0xFFCCCCCC),
     fontSize: bigTextSize
   );
 
-  static TextStyle copyTextStyle = TextStyle(
+   TextStyle get copyTextStyle  => TextStyle(
       color: Colors.deepOrange,
       fontSize: normalTextSize
   );
 
 }
 
-mixin  YBICons {
-  static const String FONT_FAMILY = 'wxcIconFont';
+class  YBICons {
+   static const String FONT_FAMILY = 'wxcIconFont';
 
-  static const String DEFAULT_USER_ICON = 'images/bpay.png';
-  static const String DEFAULT_IMAGE = 'images/default_img.png';
-  static const String DEFAULT_REMOTE_PIC =
-      'https://raw.githubusercontent.com/CarGuo/gsy_github_app_flutter/master/static/images/logo.png';
+   String DEFAULT_USER_ICON = 'images/bpay.png';
+   String DEFAULT_IMAGE = 'images/default_img.png';
+   String DEFAULT_REMOTE_PIC =
+      'https://raw.githubusercontent.com/CarGuo/gsy_github_app_flutter/master//images/logo.png';
 
-  static const IconData HOME =
-  const IconData(0xe624, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData MORE =
+   IconData HOME =
+    IconData(0xe624, fontFamily: YBICons.FONT_FAMILY);
+   IconData MORE =
   const IconData(0xe674, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData SEARCH =
+   IconData SEARCH =
   const IconData(0xe61c, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData MAIN_DT =
+   IconData MAIN_DT =
   const IconData(0xe684, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData MAIN_QS =
+   IconData MAIN_QS =
   const IconData(0xe818, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData MAIN_MY =
+   IconData MAIN_MY =
   const IconData(0xe6d0, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData MAIN_SEARCH =
+   IconData MAIN_SEARCH =
   const IconData(0xe61c, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData LOGIN_USER =
+   IconData LOGIN_USER =
   const IconData(0xe666, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData LOGIN_PW =
+   IconData LOGIN_PW =
   const IconData(0xe60e, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData REPOS_ITEM_USER =
+   IconData REPOS_ITEM_USER =
   const IconData(0xe63e, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_STAR =
+   IconData REPOS_ITEM_STAR =
   const IconData(0xe643, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_FORK =
+   IconData REPOS_ITEM_FORK =
   const IconData(0xe67e, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_ISSUE =
+   IconData REPOS_ITEM_ISSUE =
   const IconData(0xe661, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData REPOS_ITEM_STARED =
+   IconData REPOS_ITEM_STARED =
   const IconData(0xe698, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_WATCH =
+   IconData REPOS_ITEM_WATCH =
   const IconData(0xe681, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_WATCHED =
+   IconData REPOS_ITEM_WATCHED =
   const IconData(0xe629, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_DIR = Icons.folder;
-  static const IconData REPOS_ITEM_FILE =
+   IconData REPOS_ITEM_DIR = Icons.folder;
+   IconData REPOS_ITEM_FILE =
   const IconData(0xea77, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_NEXT =
+   IconData REPOS_ITEM_NEXT =
   const IconData(0xe610, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData USER_ITEM_COMPANY =
+   IconData USER_ITEM_COMPANY =
   const IconData(0xe63e, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData USER_ITEM_LOCATION =
+   IconData USER_ITEM_LOCATION =
   const IconData(0xe7e6, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData USER_ITEM_LINK =
+   IconData USER_ITEM_LINK =
   const IconData(0xe670, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData USER_NOTIFY =
+   IconData USER_NOTIFY =
   const IconData(0xe600, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData ISSUE_ITEM_ISSUE =
+   IconData ISSUE_ITEM_ISSUE =
   const IconData(0xe661, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData ISSUE_ITEM_COMMENT =
+   IconData ISSUE_ITEM_COMMENT =
   const IconData(0xe6ba, fontFamily: YBICons.FONT_FAMILY);
-  static const IconData ISSUE_ITEM_ADD =
+   IconData ISSUE_ITEM_ADD =
   const IconData(0xe662, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData ISSUE_EDIT_H1 = Icons.filter_1;
-  static const IconData ISSUE_EDIT_H2 = Icons.filter_2;
-  static const IconData ISSUE_EDIT_H3 = Icons.filter_3;
-  static const IconData ISSUE_EDIT_BOLD = Icons.format_bold;
-  static const IconData ISSUE_EDIT_ITALIC = Icons.format_italic;
-  static const IconData ISSUE_EDIT_QUOTE = Icons.format_quote;
-  static const IconData ISSUE_EDIT_CODE = Icons.format_shapes;
-  static const IconData ISSUE_EDIT_LINK = Icons.insert_link;
+   IconData ISSUE_EDIT_H1 = Icons.filter_1;
+   IconData ISSUE_EDIT_H2 = Icons.filter_2;
+   IconData ISSUE_EDIT_H3 = Icons.filter_3;
+   IconData ISSUE_EDIT_BOLD = Icons.format_bold;
+   IconData ISSUE_EDIT_ITALIC = Icons.format_italic;
+   IconData ISSUE_EDIT_QUOTE = Icons.format_quote;
+   IconData ISSUE_EDIT_CODE = Icons.format_shapes;
+   IconData ISSUE_EDIT_LINK = Icons.insert_link;
 
-  static const IconData NOTIFY_ALL_READ =
+   IconData NOTIFY_ALL_READ =
   const IconData(0xe62f, fontFamily: YBICons.FONT_FAMILY);
 
-  static const IconData PUSH_ITEM_EDIT = Icons.mode_edit;
-  static const IconData PUSH_ITEM_ADD = Icons.add_box;
-  static const IconData PUSH_ITEM_MIN = Icons.indeterminate_check_box;
+   IconData PUSH_ITEM_EDIT = Icons.mode_edit;
+   IconData PUSH_ITEM_ADD = Icons.add_box;
+   IconData PUSH_ITEM_MIN = Icons.indeterminate_check_box;
 
 }
 
 class YBSise{
 
-  static YBSise _instance;
-  static const int defaultWidth = 1080;
-  static const int defaultHeight = 1920;
+   //YBSise _instance;
+   static const int defaultWidth = 1080;
+   static const int defaultHeight = 1920;
 
   /// UI设计中手机尺寸 , px
   /// Size of the phone in UI Design , px
@@ -387,21 +393,40 @@ class YBSise{
   /// allowFontScaling Specifies whether fonts should scale to respect Text Size accessibility settings. The default is false.
   bool allowFontScaling;
 
-  static MediaQueryData _mediaQueryData;
-  static double _screenWidth;
-  static double _screenHeight;
-  static double _pixelRatio;
-  static double _statusBarHeight;
-  static double _bottomBarHeight;
-  static double _textScaleFactor;
+   MediaQueryData _mediaQueryData;
+   double _screenWidth;
+   double _screenHeight;
+   double _pixelRatio;
+   double _statusBarHeight;
+   double _bottomBarHeight;
+   double _textScaleFactor;
 
   YBSise._();
 
-  factory YBSise() {
+  /*factory YBSise() {
     return _instance;
+  }*/
+
+  YBSize(BuildContext context,
+      {num width = defaultWidth,
+        num height = defaultHeight,
+        bool allowFontScaling = false}){
+    uiWidthPx = width;
+    uiHeightPx = height;
+    allowFontScaling = allowFontScaling;
+
+    MediaQueryData mediaQuery = MediaQuery.of(context);
+    _mediaQueryData = mediaQuery;
+    _pixelRatio = mediaQuery.devicePixelRatio;
+    _screenWidth = mediaQuery.size.width;
+    _screenHeight = mediaQuery.size.height;
+    _statusBarHeight = mediaQuery.padding.top;
+    _bottomBarHeight = _mediaQueryData.padding.bottom;
+    _textScaleFactor = mediaQuery.textScaleFactor;
+    setSize(_screenWidth,_screenHeight);
   }
 
-  static void init(BuildContext context,
+ /*  void init(BuildContext context,
       {num width = defaultWidth,
         num height = defaultHeight,
         bool allowFontScaling = false}) {
@@ -425,42 +450,42 @@ class YBSise{
     }
 
   }
+*/
 
 
-
-  static MediaQueryData get mediaQueryData => _mediaQueryData;
+   MediaQueryData get mediaQueryData => _mediaQueryData;
 
   /// 每个逻辑像素的字体像素数，字体的缩放比例
   /// The number of font pixels for each logical pixel.
-  static double get textScaleFactor => _textScaleFactor;
+   double get textScaleFactor => _textScaleFactor;
 
   /// 设备的像素密度
   /// The size of the media in logical pixels (e.g, the size of the screen).
-  static double get pixelRatio => _pixelRatio;
+   double get pixelRatio => _pixelRatio;
 
   /// 当前设备宽度 dp
   /// The horizontal extent of this size.
-  static double get screenWidthDp => _screenWidth;
+   double get screenWidthDp => _screenWidth;
 
   ///当前设备高度 dp
   ///The vertical extent of this size. dp
-  static double get screenHeightDp => _screenHeight;
+   double get screenHeightDp => _screenHeight;
 
   /// 当前设备宽度 px
   /// The vertical extent of this size. px
-  static double get screenWidth => _screenWidth * _pixelRatio;
+   double get screenWidth => _screenWidth * _pixelRatio;
 
   /// 当前设备高度 px
   /// The vertical extent of this size. px
-  static double get screenHeight => _screenHeight * _pixelRatio;
+   double get screenHeight => _screenHeight * _pixelRatio;
 
   /// 状态栏高度 dp 刘海屏会更高
   /// The offset from the top
-  static double get statusBarHeight => _statusBarHeight;
+   double get statusBarHeight => _statusBarHeight;
 
   /// 底部安全区距离 dp
   /// The offset from the bottom.
-  static double get bottomBarHeight => _bottomBarHeight;
+   double get bottomBarHeight => _bottomBarHeight;
 
   /// 实际的dp与UI设计px的比例
   /// The ratio of the actual dp to the design draft px
@@ -502,23 +527,23 @@ class YBSise{
           : ((fontSize * scaleText) / _textScaleFactor));
 
   //预设转换单位
-  static double padding = 15;
-  static double small_padding = 5;
-  static double backMargin = 19;
-  static double appBarHeight = 50;
+   double padding = 15;
+   double small_padding = 5;
+   double backMargin = 19;
+   double appBarHeight = 50;
 
-  static double biglarerTextSiez = 38.0;
-  static double lagerTextSize = 30.0;
-  static double bigTextSize = 21.0;
-  static double middleTextWhiteSize = 17.0;
-  static double normalTextSize = 15.0;
-  static double smallTextSize = 13.5;
-  static double minTextSize = 12.0;
+   double biglarerTextSiez = 38.0;
+   double lagerTextSize = 30.0;
+   double bigTextSize = 21.0;
+   double middleTextWhiteSize = 17.0;
+   double normalTextSize = 15.0;
+   double smallTextSize = 13.5;
+   double minTextSize = 12.0;
 
 
   //和设计图等比例的尺寸  重复避免计算
-  static List SH = [];
-  static List SW = [];
+   List SH = [];
+   List SW = [];
 
   void setSize(width,height) {
     SW = List.generate((width+1).toInt(),(int index){
@@ -541,44 +566,7 @@ class YBSise{
     smallTextSize = setSp(13.5);
     minTextSize = setSp(12.0);
 
-
-
-
   }
-
-}
-
-/// @author yangbang
-/// @create 2020/1/11
-/// @Describe 基础样式
-abstract class YBBase {
-
-  /*//路由名称
-  get NAME;*/
-  //跳转参数
-  Map args = {};
-  get SH =>YBSise.SH;
-  get SW =>YBSise.SW;
-  get padding => YBSise.padding;
-  get small_padding => YBSise.small_padding;
-  get backMargin => YBSise.backMargin;
-  get appBarHeight => YBSise.appBarHeight;
-
-
-  get biglarerTextSiez => YBSise.biglarerTextSiez;
-  get lagerTextSize => YBSise.lagerTextSize;
-  get bigTextSize => YBSise.bigTextSize;
-  get middleTextWhiteSize => YBSise.middleTextWhiteSize;
-
-  get normalTextSize => YBSise.normalTextSize;
-  get smallTextSize => YBSise.smallTextSize;
-  get minTextSize => YBSise.minTextSize;
-
-
-
-  get TAG;
-
-
 
 }
 

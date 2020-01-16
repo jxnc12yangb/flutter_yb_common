@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 
 /// @author yangbang
@@ -53,7 +54,7 @@ class CustomRadioState extends State<CustomRadio> {
         title: Text(model.title),
         trailing: Icon(
           model.isSelected?model.icon:null,
-          color: YBColors.primaryValue,
+          color: color.primaryValue,
           size: 30,
         ),
 

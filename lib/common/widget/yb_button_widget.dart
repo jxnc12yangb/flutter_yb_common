@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 import 'package:yb_common/common/widget/yb_card_item.dart';
 
@@ -21,9 +22,9 @@ class YBButton{
           width: width??double.infinity,
           alignment: Alignment.center,
           //padding: EdgeInsets.all(18),
-          child: Text(text,style:styles??=YBTextStyle.normalTextWhite),),
+          child: Text(text,style:styles??=textStyle.normalTextWhite),),
       ),
-      color: YBColors.primaryValue,
+      color: color.primaryValue,
       margin: margin??EdgeInsets.zero,
     );
   }
@@ -32,14 +33,14 @@ class YBButton{
   static Widget CardButtonWithBorder({elevation,contentColor,bordColor,child,onPress,margin,shape,double width,height}){
     return YBCardItem(
       elevation:elevation??1,//支付
-      shape: shape??new RoundedRectangleBorder(side:BorderSide(width:4,color:bordColor??YBColors.primaryValue),borderRadius: BorderRadius.all(Radius.circular(4.0))),
+      shape: shape??new RoundedRectangleBorder(side:BorderSide(width:4,color:bordColor??color.primaryValue),borderRadius: BorderRadius.all(Radius.circular(4.0))),
       child: RawMaterialButton(
         onPressed: onPress,
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         constraints: BoxConstraints(minWidth:width??double.infinity, minHeight:height??0.0),
         child: child
       ),
-      color: contentColor??YBColors.white,
+      color: contentColor??color.white,
       margin: margin??EdgeInsets.zero,
     );
   }
@@ -48,14 +49,14 @@ class YBButton{
 
   static Widget CardItem({contentColor,bordColor,child,onPress,margin,shape,double width}){
     return YBCardItem(//支付
-      //shape: shape??new RoundedRectangleBorder(side:BorderSide(width:4,color:bordColor??YBColors.primaryValue),borderRadius: BorderRadius.all(Radius.circular(4.0))),
+      //shape: shape??new RoundedRectangleBorder(side:BorderSide(width:4,color:bordColor??color.primaryValue),borderRadius: BorderRadius.all(Radius.circular(4.0))),
       child: RawMaterialButton(
           onPressed: onPress,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           constraints: BoxConstraints(minWidth:width??double.infinity, minHeight: 0.0),
           child: child
       ),
-      color: contentColor??YBColors.white,
+      color: contentColor??color.white,
       margin: margin??EdgeInsets.zero,
     );
   }
@@ -77,9 +78,9 @@ class YBButton{
           width: width,
           alignment: Alignment.center,
           //padding: EdgeInsets.all(18),
-          child: new Text(text,style:styles??=YBTextStyle.normalTextWhite),),
+          child: new Text(text,style:styles??=textStyle.normalTextWhite),),
       ),
-      color: YBColors.primaryValue,
+      color: color.primaryValue,
       margin: margin??EdgeInsets.zero,
     );
   }*/

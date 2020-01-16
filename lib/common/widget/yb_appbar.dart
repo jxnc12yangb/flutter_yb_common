@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 import 'package:yb_common/common/util/PageManager.dart';
 
@@ -52,12 +53,12 @@ class YBAppBar extends AppBar{
                 color: Colors.transparent,
                 child: new Text(
                   title??"",
-                  style:YBTextStyle.normalText,
+                  style:textStyle.normalText,
                 ))),
       actions: <Widget>[
         Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.only(right:YBSise.backMargin),
+          margin: EdgeInsets.only(right:size.backMargin),
           child: new Material(
             color: Colors.transparent,
             child:new GestureDetector(
@@ -86,7 +87,7 @@ class YBAppBar extends AppBar{
                 color: Colors.transparent,
                 child: new Text(
                   title??"",
-                  style:YBTextStyle.normalText,
+                  style:textStyle.normalText,
                 )))
     );
   }
@@ -109,7 +110,7 @@ class YBAppBar extends AppBar{
       actions: <Widget>[
         Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.only(right:YBSise.backMargin),
+          margin: EdgeInsets.only(right:size.backMargin),
           child: new Material(
             color: Colors.transparent,
             child:new GestureDetector(
@@ -133,12 +134,12 @@ class YBAppBar extends AppBar{
               color: Colors.transparent,
               child: new Text(
                 title,
-                style:YBTextStyle.normalText,
+                style:textStyle.normalText,
               ))),
       actions: <Widget>[
         Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.only(right:YBSise.backMargin),
+          margin: EdgeInsets.only(right:size.backMargin),
           child: new Material(
             color: Colors.transparent,
             child:new GestureDetector(

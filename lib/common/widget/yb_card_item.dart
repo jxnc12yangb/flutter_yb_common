@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yb_common/style.dart';
+import 'package:yb_common/base.dart' as base;
 
 /// card item
 class YBCardItem extends StatelessWidget {
@@ -25,7 +25,7 @@ class YBCardItem extends StatelessWidget {
         EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0, bottom: 10.0);
     shape ??= new RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(4.0)));
-    color ??= YBColors.cardWhite;
+    color ??= base.color.cardWhite;
     return new Card(
         elevation: elevation,
         shape: shape,
@@ -58,7 +58,7 @@ class YBLineCardItem extends StatelessWidget {
         EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0, bottom: 10.0);
     shape ??= new RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(4.0)));
-    color ??= YBColors.cardWhite;
+    color ??= base.color.cardWhite;
     return new Card(
         elevation: elevation,
         shape: shape,

@@ -158,11 +158,16 @@ class ValueUtil {
 
 class DeviceInfo{
 
-  static String deviceName;
-  static String deviceVersion;
-  static String identifier;
-  static String param = "";
-  static Future<List<String>> getDeviceInfo() async {
+  String deviceName;
+  String deviceVersion;
+  String identifier;
+  String param = "";
+
+  DeviceInfo(){
+    getDeviceInfo();
+  }
+
+  Future<List<String>> getDeviceInfo() async {
 
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     if (Platform.isAndroid ) {
@@ -182,7 +187,7 @@ class DeviceInfo{
   }
 
 
-  static String getString() {
+  String getString() {
     // TODO: implement toString
     return "$param $deviceName";
   }
