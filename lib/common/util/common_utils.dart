@@ -8,6 +8,8 @@ import 'package:device_info/device_info.dart';
 /// @Describe
 class CommonUtils{
 
+  static const bool release = bool.fromEnvironment("dart.vm.product");
+
   static Future<void> showBottomView(BuildContext context,Widget widget,double percent) {
     return showModalBottomSheet(
         context: context,

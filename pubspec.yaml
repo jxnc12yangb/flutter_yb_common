@@ -18,6 +18,17 @@ dev_dependencies:
     sdk: flutter
   device_info: 0.4.0+3
   encrypt: 3.2.0 #rsa 加密
+  shared_preferences: 0.5.4 # 存储
+  connectivity: 0.4.6 #网络状态监听工具
+  common_utils: 1.1.3 #通用工具
+  event_bus: 1.1.0 # 事件总线
+  dio: 3.0.7 #网络请求库
+  dio_http_cache: 0.2.5 #dio 缓存库
+  fluttertoast: 3.1.3
+
+  flutter_spinkit: 4.1.1 #动画特效
+  flare_flutter: 1.8.3
+  gzx_dropdown_menu : 1.0.3
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
