@@ -21,9 +21,9 @@ class HttpManager {
 
 
 
-  HttpManager(List<MyInterceptorsWrapper> interceptors) {
+  HttpManager(List<InterceptorsWrapper> interceptors) {
 
-    interceptors.forEach((T){T.dio = _dio;});
+    interceptors.forEach((T){ if(T is MyInterceptorsWrapper){T.dio = _dio;}});
     _dio.interceptors.addAll(interceptors);
   }
 
