@@ -2,7 +2,6 @@ library net;
 /// @author yangbang
 /// @create 2020/1/15
 /// @Describe
-export 'package:yb_common/common/net/address.dart';
 export 'package:yb_common/common/net/api.dart';
 export 'package:yb_common/common/net/code.dart';
 export 'package:yb_common/common/net/result_data.dart';
