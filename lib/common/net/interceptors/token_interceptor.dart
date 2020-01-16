@@ -2,21 +2,18 @@ import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
 import 'package:yb_common/common/local/local_storage.dart';
-import 'package:yb_common/common/util/EncryptUtil.dart';
-import 'package:yb_common/common/util/Log.dart';
+import 'package:yb_common/net.dart';
 
-import '../address.dart';
 import 'package:synchronized/synchronized.dart' as synchronized;
 
 /// @author yangbang
 /// @create 2019/12/12
 /// @Describe Token拦截器
 
-class TokenInterceptors extends InterceptorsWrapper {
+class TokenInterceptors extends MyInterceptorsWrapper {
   static const String TAG = "TokenInterceptors";
 
-  Dio _dio;
-  TokenInterceptors(this._dio);
+  TokenInterceptors();
 
   bool _token = false;
   final _lock = synchronized.Lock();
@@ -28,7 +25,7 @@ class TokenInterceptors extends InterceptorsWrapper {
       //Log.dTAG(TAG,"begin author autho Success1");
       //print("rsaEncode onRequest");
     }else{
-      _dio.lock();
+      dio.lock();
       await _lock.synchronized(() async {
         // Only this block can run (once) until done
         var authorSuccess = await getAuthorization();
@@ -38,7 +35,7 @@ class TokenInterceptors extends InterceptorsWrapper {
           //initClient(_token);
         }
       });
-      _dio.unlock();
+      dio.unlock();
     }
     //options.headers["Authorization"] = _token;
     return options;
@@ -57,9 +54,9 @@ class TokenInterceptors extends InterceptorsWrapper {
 
       if (err?.response?.statusCode == 403) {
         log.dTAG(TAG, "DioError auth 异常 $err");
-        _dio.lock();
-        _dio.interceptors.responseLock.lock();
-        _dio.interceptors.errorLock.lock();
+        dio.lock();
+        dio.interceptors.responseLock.lock();
+        dio.interceptors.errorLock.lock();
 
         await _lock.synchronized(() async {
           await LocalStorage.save(Config.API_KEY, "");
@@ -71,10 +68,10 @@ class TokenInterceptors extends InterceptorsWrapper {
             //initClient(_token);
           }
         });
-        _dio.unlock();
-        _dio.interceptors.responseLock.unlock();
-        _dio.interceptors.errorLock.unlock();
-        return _dio.request(err.request.path,options:err.request);
+         dio.unlock();
+         dio.interceptors.responseLock.unlock();
+         dio.interceptors.errorLock.unlock();
+        return  dio.request(err.request.path,options:err.request);
       }
     } catch (e,s) {
       log.i2(e,s);

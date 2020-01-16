@@ -7,6 +7,7 @@ import 'package:yb_common/common/local/local_storage.dart';
 import 'package:yb_common/common/util/Log.dart';
 import 'package:yb_common/common/util/common_utils.dart';
 import 'package:yb_common/common/util/date_util.dart';
+import 'package:yb_common/net.dart';
 import '../code.dart';
 import '../result_data.dart';
 import 'dart:convert';
@@ -21,11 +22,10 @@ import 'package:crypto/crypto.dart';
 /// 第二步，拼接成的字符串，拼接上key（app授权时生成的key）得到stringSignTemp字符串，并对stringSignTemp进行MD5运算，转为大写字母，得到值即为sign。
 /// 接口必传参数：
 /// sign	string	详见签名算法nonce_str	string	随机字符串，长度要求在32位以内timestamp	string	10位时间戳
-class RequestInterceptors extends InterceptorsWrapper {
+class RequestInterceptors extends MyInterceptorsWrapper {
 
   static const TAG = "RequestInterceptors";
-  Dio _dio;
-  RequestInterceptors(this._dio);
+  RequestInterceptors();
   @override
   onRequest(RequestOptions options) async {
     //授权码
@@ -49,7 +49,7 @@ class RequestInterceptors extends InterceptorsWrapper {
       });
       String apiKey  = await LocalStorage.get(Config.API_KEY);
       if (apiKey == null || apiKey.isEmpty) {
-        return _dio.resolve(new ResultData(
+        return dio.resolve(new ResultData(
             Code.errorHandleFunction(Code.NO_AUTH, "key not auth", false),
             false, Code.NO_AUTH));
       } else {
@@ -81,7 +81,7 @@ class RequestInterceptors extends InterceptorsWrapper {
         });
         String apiKey  = await LocalStorage.get(Config.API_KEY);
         if (apiKey == null || apiKey.isEmpty) {
-          return _dio.resolve(new ResultData(
+          return dio.resolve(new ResultData(
               Code.errorHandleFunction(Code.NO_AUTH, "key not auth", false),
               false, Code.NO_AUTH));
         } else {

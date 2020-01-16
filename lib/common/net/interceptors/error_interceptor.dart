@@ -1,5 +1,6 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:dio/dio.dart';
+import 'package:yb_common/net.dart';
 import '../code.dart';
 import '../result_data.dart';
 
@@ -9,17 +10,16 @@ const NOT_TIP_KEY = "noTip";
 /// @author yangbang
 /// @create 2019/12/12
 /// @Describe 错误拦截
-class ErrorInterceptors extends InterceptorsWrapper {
-  final Dio _dio;
+class ErrorInterceptors extends MyInterceptorsWrapper {
 
-  ErrorInterceptors(this._dio);
+  ErrorInterceptors() : super();
 
   @override
   onRequest(RequestOptions options) async {
     //没有网络
     var connectivityResult = await (new Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
-      return _dio.resolve(new ResultData(
+      return dio.resolve(new ResultData(
           Code.errorHandleFunction(Code.NETWORK_ERROR, "网络异常", false),
           false,
           Code.NETWORK_ERROR));

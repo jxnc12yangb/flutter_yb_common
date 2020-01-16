@@ -21,11 +21,10 @@ class HttpManager {
 
 
 
-  HttpManager(List<InterceptorsWrapper> interceptors) {
+  HttpManager(List<MyInterceptorsWrapper> interceptors) {
 
-    //DioCacheManager(CacheConfig(baseUrl: "http://www.google.com")
+    interceptors.forEach((T){T.dio = _dio;});
     _dio.interceptors.addAll(interceptors);
-
   }
 
   ///发起网络请求
@@ -119,6 +118,11 @@ class DeleteOptions extends RequestOptions{
     Options request = RequestOptions(method:Constant.DELETE,data:map,responseType:ResponseType.plain);
     return cacheDuration==null?request:buildCacheOptions(cacheDuration,options:request,subKey:subKey??"");
   }
+}
+
+abstract class MyInterceptorsWrapper extends InterceptorsWrapper{
+  Dio dio;
+  MyInterceptorsWrapper();
 }
 
 

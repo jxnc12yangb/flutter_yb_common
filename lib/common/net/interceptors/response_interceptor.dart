@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
 import 'package:yb_common/common/net/code.dart';
-import 'package:yb_common/common/util/Log.dart';
+import 'package:yb_common/net.dart';
 
 import '../result_data.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -11,8 +11,10 @@ import 'package:fluttertoast/fluttertoast.dart';
 /// @author yangbang
 /// @create 2019/12/12
 /// @Describe reponse 拦截器
-class ResponseInterceptors extends InterceptorsWrapper {
+class ResponseInterceptors extends MyInterceptorsWrapper {
   static const TAG = "ResponseInterceptors";
+
+  ResponseInterceptors();
 
   @override
   onResponse(Response response) async {

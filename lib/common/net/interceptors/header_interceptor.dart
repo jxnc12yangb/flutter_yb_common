@@ -1,11 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:yb_common/common/util/common_utils.dart';
+import 'package:yb_common/net.dart';
 
 
 /// @author yangbang
 /// @create 2019/12/12
 /// @Describe head拦截器
-class HeaderInterceptors extends InterceptorsWrapper {
+class HeaderInterceptors extends MyInterceptorsWrapper {
+  HeaderInterceptors();
+
   @override
   onRequest(RequestOptions options) async {
     ///超时

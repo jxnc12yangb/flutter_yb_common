@@ -3,14 +3,17 @@ import 'package:dio/dio.dart';
 import 'package:yb_common/base.dart';
 import 'package:yb_common/common/config/config.dart';
 import 'package:yb_common/common/util/Log.dart';
+import 'package:yb_common/net.dart';
 
 /// @author yangbang
 /// @create 2019/12/12
 /// @Describe Log 拦截器
-class LogsInterceptors extends InterceptorsWrapper {
+class LogsInterceptors extends MyInterceptorsWrapper {
   static const String TAG = "";
   
   Map<String,Map<String,dynamic>> logs = {};
+
+  LogsInterceptors();
 
   @override
   onRequest(RequestOptions options) async {
