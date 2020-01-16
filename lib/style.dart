@@ -401,7 +401,7 @@ class YBSise{
    double _bottomBarHeight;
    double _textScaleFactor;
 
-  YBSise._();
+  //YBSise._();
 
   /*factory YBSise() {
     return _instance;
