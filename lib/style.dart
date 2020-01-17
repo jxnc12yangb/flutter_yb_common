@@ -407,7 +407,7 @@ class YBSise{
     return _instance;
   }*/
 
-  YBSize(BuildContext context,
+   YBSise(BuildContext context,
       {num width = defaultWidth,
         num height = defaultHeight,
         bool allowFontScaling = false}){
