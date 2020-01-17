@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yb_common/common/widget/yb_text_widget.dart';
 
-import '../../base.dart';
+import 'package:yb_common/base.dart';
 
 /// @author yangbang
 /// @create 2019/12/16

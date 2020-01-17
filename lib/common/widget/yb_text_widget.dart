@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yb_common/base.dart';
 
-import '../../base.dart';
+
 
 /// @author yangbang
 /// @create 2019/12/17

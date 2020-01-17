@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:yb_common/config.dart';
 import 'package:yb_common/net.dart';
 
-import '../../../base.dart';
+import 'package:yb_common/base.dart';
 
 /// @author yangbang
 /// @create 2019/12/12

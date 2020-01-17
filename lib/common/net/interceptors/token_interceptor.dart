@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:yb_common/base.dart';
 import 'package:yb_common/config.dart';
 import 'package:yb_common/local_storage.dart';
 import 'package:yb_common/net.dart';
 
 import 'package:synchronized/synchronized.dart' as synchronized;
 
-import '../../../base.dart';
 
 /// @author yangbang
 /// @create 2019/12/12

@@ -3,7 +3,8 @@
 /// @Describe
 import 'package:flutter/material.dart';
 import 'package:gzx_dropdown_menu/gzx_dropdown_menu.dart';
-import '../../base.dart';
+import 'package:yb_common/base.dart';
+//import 'package:yb_common/base.dart';
 
 typedef OnItemTap<T> = void Function(T value);
 
