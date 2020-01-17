@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yb_common/base.dart';
 import 'package:yb_common/style.dart';
 import 'package:yb_common/common/widget/yb_card_item.dart';
+
+import '../../base.dart';
 
 
 /// @author yangbang

@@ -1,8 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:yb_common/base.dart';
 import 'package:yb_common/common/localization/yb_string_zh.dart';
 import 'package:yb_common/style.dart';
+
+import '../../base.dart';
 
 /// @author yangbang
 /// @create 2019/12/17

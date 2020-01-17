@@ -7,7 +7,7 @@ homepage:
 environment:
   sdk: ">=2.1.0 <3.0.0"
   # Flutter versions prior to 1.10 did not support the flutter.plugin.platforms map.
-  #flutter: ">=1.10.0 <2.0.0"
+  flutter: ">=1.9.0 <2.0.0"
 
 dependencies:
   flutter:
@@ -16,7 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  device_info: 0.4.0+3
+  device_info: ^0.4.0+3
   encrypt: 3.2.0 #rsa 加密
   shared_preferences: 0.5.4 # 存储
   connectivity: 0.4.6 #网络状态监听工具

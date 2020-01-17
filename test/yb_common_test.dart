@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:yb_common/base.dart';
+import '../lib/base.dart';
+
 
 
 void main() {

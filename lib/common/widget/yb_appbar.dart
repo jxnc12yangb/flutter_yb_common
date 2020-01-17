@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yb_common/base.dart';
-import 'package:yb_common/style.dart';
 import 'package:yb_common/common/util/PageManager.dart';
+
+import '../../base.dart';
 
 /// @author yangbang
 /// @create 2019/12/26

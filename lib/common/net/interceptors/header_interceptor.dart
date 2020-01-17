@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:yb_common/base.dart';
-import 'package:yb_common/common/util/common_utils.dart';
 import 'package:yb_common/net.dart';
+import '../../../base.dart';
 
 
 /// @author yangbang
@@ -15,7 +14,6 @@ class HeaderInterceptors extends MyInterceptorsWrapper {
     ///超时
     options.connectTimeout = 30000;
     options.headers.addAll({"SBID":device.identifier});
-
 
     return options;
   }

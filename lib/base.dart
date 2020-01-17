@@ -19,10 +19,13 @@ final DeviceInfo device = DeviceInfo();
 YBColors color = YBColors();
 YBSise size;
 YBTextStyle textStyle;
+
+/*
 init(YBSise s){
   size = s;
   textStyle = YBTextStyle(s,color);
 }
+*/
 
 
 /// A Calculator.

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:yb_common/base.dart';
 import 'package:yb_common/common/net/code.dart';
 import 'package:yb_common/net.dart';
 
+import '../../../base.dart';
 import '../result_data.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

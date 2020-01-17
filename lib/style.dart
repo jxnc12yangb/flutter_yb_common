@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// @Describe
 class YBColors {
   
-  YBColors({this.primaryIntValue}){
+  YBColors({this.primaryIntValue=0xFF498FFF}){
     primarySwatch = MaterialColor(primaryIntValue,<int, Color>{
       50:  Color(primaryIntValue),
       100:  Color(primaryIntValue),
@@ -410,7 +410,7 @@ class YBSise{
    YBSise(BuildContext context,
       {num width = defaultWidth,
         num height = defaultHeight,
-        bool allowFontScaling = false}){
+        this.allowFontScaling = false}){
     uiWidthPx = width;
     uiHeightPx = height;
     allowFontScaling = allowFontScaling;

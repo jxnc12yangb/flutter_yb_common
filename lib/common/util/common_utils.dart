@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:device_info/device_info.dart';
+
+import 'Log.dart';
 /// @author yangbang
 /// @create 2019/12/14
 /// @Describe
@@ -164,7 +166,8 @@ class DeviceInfo{
   String param = "";
 
   DeviceInfo(){
-    getDeviceInfo();
+    print("init device @@@@@@@@@@@@!!!");
+    //getDeviceInfo();
   }
 
   Future<List<String>> getDeviceInfo() async {
